@@ -1,0 +1,15 @@
+﻿<Window x:Class="Project_OOP_Arduino__Sensor_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Project_OOP_Arduino__Sensor_WPF"
+        mc:Ignorable="d"
+        Title="Project OOP" SizeToContent="Height" Width="600" FontSize="18" Loaded="Window_Loaded">
+    <StackPanel>
+        <GroupBox Header="Kies je COM poort" Margin="10">
+            <ComboBox Name="cbxPortName" Margin="10" SelectionChanged="cbxPortName_SelectionChanged" IsTabStop="False"></ComboBox>
+        </GroupBox>
+        <Label Name="lbl1" Height="50"></Label>
+    </StackPanel>
+</Window>
