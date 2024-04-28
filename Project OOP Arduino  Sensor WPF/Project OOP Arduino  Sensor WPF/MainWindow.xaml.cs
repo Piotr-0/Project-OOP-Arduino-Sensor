@@ -1,5 +1,6 @@
 ﻿using System.IO.Ports;
 using System.Text;
+using System.Text.Json;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -9,6 +10,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
+using static System.IO.Path;
+using System.Threading;
+
 
 namespace Project_OOP_Arduino__Sensor_WPF
 {
@@ -19,6 +24,7 @@ namespace Project_OOP_Arduino__Sensor_WPF
     {
         SerialPort _serialPort;
         private int maximaleAfstand;
+
 
         public MainWindow()
         {
@@ -45,6 +51,8 @@ namespace Project_OOP_Arduino__Sensor_WPF
             {
                 MessageBox.Show($"Wrong input data: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+
+            DisplayLastSavedData();
         }
 
         private void cbxPortName_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -58,6 +66,9 @@ namespace Project_OOP_Arduino__Sensor_WPF
                 {
                     _serialPort.PortName = cbxPortName.SelectedItem.ToString();
                     _serialPort.Open();
+
+                    txtbxMaxAfstand.IsEnabled = true;
+                    btnUpdateMax.IsEnabled = true;
                 }
             }
         }
@@ -72,6 +83,8 @@ namespace Project_OOP_Arduino__Sensor_WPF
             if (distance > maximaleAfstand)
             {
                 UpdateLabels(distance, Brushes.Red);
+                SaveData(distance);
+                DisplayLastSavedData();
             }
             else
             {
@@ -83,11 +96,75 @@ namespace Project_OOP_Arduino__Sensor_WPF
         {
             Dispatcher.Invoke(() =>
             {
-                lbl1.Content = $"{afstand} Cm";
-                lbl1.Background = kleur;
+                lblAfstand.Content = $"{afstand} Cm";
+                lblAfstand.Background = kleur;
                 UpdateCircle();
             });
         }
+
+        private async void SaveData(float afstand)
+        {
+            DateTime currentTime = DateTime.Now;
+            int day = currentTime.Day;
+            string time = currentTime.ToLongTimeString();
+            string dayString = currentTime.ToShortDateString();
+
+
+            OpslaanData dataToSave = new OpslaanData()
+            {
+                Afstand = afstand,
+                Tijd = time,
+                Datum = dayString
+            };
+
+            string json = JsonSerializer.Serialize(dataToSave);
+            if (!string.IsNullOrEmpty(json))
+            {
+                string filePath = Combine(Environment.CurrentDirectory, "Data_Overschrijdingen.json");
+                File.AppendAllText(filePath, json + Environment.NewLine);
+            }
+        }
+
+        public async void DisplayLastSavedData()
+        {
+            try
+            {
+                string filePath = Combine(Environment.CurrentDirectory, "Data_Overschrijdingen.json");
+                string[] lines = File.ReadAllLines(filePath);
+                List<OpslaanData> dataList = new List<OpslaanData>();
+
+                foreach (string line in lines)
+                {
+                    OpslaanData data = JsonSerializer.Deserialize<OpslaanData>(line);
+                    dataList.Add(data);
+                }
+
+                OpslaanData lastData = dataList.OrderByDescending(d => d.Datum).ThenByDescending(d => d.Tijd).FirstOrDefault();
+
+                if (lastData != null)
+                {
+                    Dispatcher.Invoke(() =>
+                    {
+                        lblLaatsteOvers.Content = lastData.Tijd;
+                    });
+                }
+                else
+                {
+                    Dispatcher.Invoke(() =>
+                    {
+                        lblLaatsteOvers.Content = "Geen data beschikbaar";
+                    });
+                }
+            }
+            catch (Exception ex)
+            {
+                Dispatcher.Invoke(() =>
+                {
+                    lblLaatsteOvers.Content = "Geen data beschikbaar";
+                });
+            }
+        }
+
 
         private async void UpdateCircle()
         {
@@ -114,6 +191,12 @@ namespace Project_OOP_Arduino__Sensor_WPF
             {
                 MessageBox.Show($"Wrong input data: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+        }
+
+        private void btnShowMore_Click(object sender, RoutedEventArgs e)
+        {
+            WindowData windowData = new WindowData();
+            windowData.Show();
         }
     }
 }

@@ -12,21 +12,21 @@
         </GroupBox>
 
         <GroupBox Header="Gemeten afstand" Margin="10">
-            <Label Name="lbl1" Height="50"></Label>
+            <Label Name="lblAfstand" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="50"></Label>
         </GroupBox>
 
         <GroupBox Header="Overschrijdingen" Margin="10">
             <DockPanel MinHeight="50">
                 <GroupBox Header="Maximale afstand (cm)" Margin="10" Width="250" HorizontalAlignment="Left" Height="70">
                     <DockPanel>
-                        <TextBox Width="80" HorizontalAlignment="Left" Margin="5" Text="60" Name="txtbxMaxAfstand"></TextBox>
-                        <Button Content="Update" Name="btnUpdateMax" Click="btnUpdateMax_Click" Margin="5"></Button>
+                        <TextBox Width="80" HorizontalAlignment="Left" Margin="5" Text="60" Name="txtbxMaxAfstand" IsEnabled="False"></TextBox>
+                        <Button Content="Update" Name="btnUpdateMax" Click="btnUpdateMax_Click" Margin="5" IsEnabled="False"></Button>
                     </DockPanel>
                 </GroupBox>
                 <GroupBox Header="Laatste Overschrijding" Margin="10" Width="250" HorizontalAlignment="Left">
                     <StackPanel>
-                        <Label Content="..."></Label>
-                        <Button Margin="10" Content="Meer" ></Button>
+                        <Label Content="..." Name="lblLaatsteOvers"></Label>
+                        <Button Margin="10" Name="btnShowMore" Content="Meer" Click="btnShowMore_Click" ></Button>
                     </StackPanel>
                 </GroupBox>
 

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "7VV+OblqywmiJJYyqzlH8UxvHWZN2cljsZRUDjLrPxBDJJy+S0xRFLDSy8xviWc1Vyd9FBJoOji555nsCeBHWA==",
+  "dgSpecHash": "rQHNs6DDoa+miIprHO/fds2XLQSISUE1Tg/+lGpV1j4gJlk+JlqmLqZWB+Vxk/Trc0FxjA++f58/LWVGdKjD4A==",
   "success": true,
   "projectFilePath": "D:\\Github\\Project OOP Arduino Sensor\\Project OOP Arduino  Sensor WPF\\Project OOP Arduino  Sensor WPF\\Project OOP Arduino  Sensor WPF.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\piotr\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\piotr\\.nuget\\packages\\runtime.linux-arm.runtime.native.system.io.ports\\8.0.0\\runtime.linux-arm.runtime.native.system.io.ports.8.0.0.nupkg.sha512",
     "C:\\Users\\piotr\\.nuget\\packages\\runtime.linux-arm64.runtime.native.system.io.ports\\8.0.0\\runtime.linux-arm64.runtime.native.system.io.ports.8.0.0.nupkg.sha512",
     "C:\\Users\\piotr\\.nuget\\packages\\runtime.linux-x64.runtime.native.system.io.ports\\8.0.0\\runtime.linux-x64.runtime.native.system.io.ports.8.0.0.nupkg.sha512",

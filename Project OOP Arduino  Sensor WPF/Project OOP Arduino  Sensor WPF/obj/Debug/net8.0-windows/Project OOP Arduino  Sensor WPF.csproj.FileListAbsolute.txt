@@ -29,3 +29,6 @@ D:\Github\Project OOP Arduino Sensor\Project OOP Arduino  Sensor WPF\Project OOP
 D:\Github\Project OOP Arduino Sensor\Project OOP Arduino  Sensor WPF\Project OOP Arduino  Sensor WPF\obj\Debug\net8.0-windows\Project OOP Arduino  Sensor WPF.genruntimeconfig.cache
 D:\Github\Project OOP Arduino Sensor\Project OOP Arduino  Sensor WPF\Project OOP Arduino  Sensor WPF\obj\Debug\net8.0-windows\ref\Project OOP Arduino  Sensor WPF.dll
 D:\Github\Project OOP Arduino Sensor\Project OOP Arduino  Sensor WPF\Project OOP Arduino  Sensor WPF\obj\Debug\net8.0-windows\Project OOP Arduino  Sensor WPF.sourcelink.json
+D:\Github\Project OOP Arduino Sensor\Project OOP Arduino  Sensor WPF\Project OOP Arduino  Sensor WPF\obj\Debug\net8.0-windows\WindowData.g.cs
+D:\Github\Project OOP Arduino Sensor\Project OOP Arduino  Sensor WPF\Project OOP Arduino  Sensor WPF\obj\Debug\net8.0-windows\WindowData.baml
+D:\Github\Project OOP Arduino Sensor\Project OOP Arduino  Sensor WPF\Project OOP Arduino  Sensor WPF\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
