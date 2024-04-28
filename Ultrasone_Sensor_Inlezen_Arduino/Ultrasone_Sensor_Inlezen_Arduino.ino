@@ -8,7 +8,8 @@ void setup() {
 }
 
 void loop() {
-  long duration, distance;
+  long duration;
+  float distance;
 
   // Send a short pulse on the trigger pin
   digitalWrite(trigPin, LOW);
@@ -20,11 +21,11 @@ void loop() {
   // Measure the time it takes for the pulse to return
   duration = pulseIn(echoPin, HIGH);
 
-  // Calculate the distance in centimeters
-  distance = duration * 0.034 / 2;
+  // Calculate the distance in centimeters with one decimal place
+  distance = (float)duration * 0.034 / 2;
 
-  // Print the distance on the serial monitor
-  Serial.println(distance);
+  // Print the distance on the serial monitor with one decimal place
+  Serial.println(distance, 1);
 
-  delay(200);
+  delay(400);
 }
