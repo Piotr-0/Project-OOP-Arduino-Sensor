@@ -24,8 +24,12 @@ void loop() {
   // Calculate the distance in centimeters with one decimal place
   distance = (float)duration * 0.034 / 2;
 
-  // Print the distance on the serial monitor with one decimal place
-  Serial.println(distance, 1);
+  // Convert the distance to a string and replace '.' with ','
+  String distanceString = String(distance, 1);
+  distanceString.replace(".", ",");
+
+  // Print the distance on the serial monitor
+  Serial.println(distanceString);
 
   delay(400);
 }

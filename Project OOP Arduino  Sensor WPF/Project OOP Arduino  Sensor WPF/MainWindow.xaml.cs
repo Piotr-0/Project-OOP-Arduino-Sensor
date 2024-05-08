@@ -25,11 +25,9 @@ namespace Project_OOP_Arduino__Sensor_WPF
         SerialPort _serialPort;
         private int maximaleAfstand;
 
-
         public MainWindow()
         {
             InitializeComponent();
-
             cbxPortName.Items.Add("None");
             foreach (string s in SerialPort.GetPortNames())
                 cbxPortName.Items.Add(s);
@@ -38,7 +36,6 @@ namespace Project_OOP_Arduino__Sensor_WPF
             _serialPort.BaudRate = 9600;
 
             _serialPort.DataReceived += _serialPort_DataReceived;
-
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -78,13 +75,15 @@ namespace Project_OOP_Arduino__Sensor_WPF
             string data = _serialPort.ReadLine();
             data = data.TrimEnd('\r', '\n');
 
-            float distance = float.Parse(data) / 10;
+            if (float.TryParse(data, out float distance)) { }
 
             if (distance > maximaleAfstand)
             {
                 UpdateLabels(distance, Brushes.Red);
+
                 SaveData(distance);
                 DisplayLastSavedData();
+
             }
             else
             {
@@ -104,17 +103,17 @@ namespace Project_OOP_Arduino__Sensor_WPF
 
         private async void SaveData(float afstand)
         {
+
             DateTime currentTime = DateTime.Now;
             int day = currentTime.Day;
             string time = currentTime.ToLongTimeString();
             string dayString = currentTime.ToShortDateString();
 
-
             OpslaanData dataToSave = new OpslaanData()
             {
-                Afstand = afstand,
+                Datum = dayString,
                 Tijd = time,
-                Datum = dayString
+                Afstand = afstand
             };
 
             string json = JsonSerializer.Serialize(dataToSave);
@@ -195,8 +194,13 @@ namespace Project_OOP_Arduino__Sensor_WPF
 
         private void btnShowMore_Click(object sender, RoutedEventArgs e)
         {
+            UpdateWindow(2);
+        }
+
+        private void UpdateWindow(int getal)
+        {
             WindowData windowData = new WindowData();
-            windowData.Show();
+                windowData.Show();
         }
     }
 }

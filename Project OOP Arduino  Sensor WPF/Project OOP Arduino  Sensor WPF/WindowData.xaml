@@ -10,7 +10,22 @@
         <GroupBox Header="Beschikbare data" Margin="10">
             <StackPanel>
             <Button Height="30" Margin="20" Name="btnClearData" Content="Data Verwijderen" Click="btnClearData_Click" ></Button>
-            <ListBox MinHeight="200" MaxHeight="500" Name="listbxData" ></ListBox>
+                <ListBox x:Name="listbxData" MinHeight="200" MaxHeight="500">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <DockPanel>
+                                    <TextBlock Text="{Binding Datum}" />
+                                    <TextBlock Text="{Binding Tijd}" Margin="5,0,5,0"/>
+                                </DockPanel>
+                                <DockPanel>
+                                <TextBlock Text="{Binding Afstand}" />
+                                <TextBlock Text=" cm" />
+                                </DockPanel>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
             </StackPanel>
         </GroupBox>
     </StackPanel>

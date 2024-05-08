@@ -44,9 +44,7 @@ namespace Project_OOP_Arduino__Sensor_WPF
                 try
                 {
                     File.WriteAllText(filePath, string.Empty);
-                    MessageBox.Show("Data verwijderd");
-                    MainWindow mainWindow = new MainWindow();
-                    mainWindow.DisplayLastSavedData();
+                    updateWindow(1);
                 }
                 catch (Exception ex)
                 {
@@ -57,12 +55,31 @@ namespace Project_OOP_Arduino__Sensor_WPF
             {
                 MessageBox.Show("Data file not found", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-
+            DisplayData();
         }
 
-        private void DisplayData()
+        public void DisplayData()
         {
+            string[] jsonLines = File.ReadAllLines("Data_Overschrijdingen.json");
+            List<OpslaanData> dataList = new List<OpslaanData>();
 
+            foreach (string line in jsonLines)
+            {
+                OpslaanData data = JsonConvert.DeserializeObject<OpslaanData>(line);
+                dataList.Add(data);
+            }
+
+            Dispatcher.Invoke(() =>
+            {
+                listbxData.ItemsSource = dataList;
+            });
+        }
+
+        public void updateWindow(int getal)
+        {
+            MainWindow mainWindow = new MainWindow();
+            if (getal == 1)
+            mainWindow.DisplayLastSavedData();
         }
     }
 }
