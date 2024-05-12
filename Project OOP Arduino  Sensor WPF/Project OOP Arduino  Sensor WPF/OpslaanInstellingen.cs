@@ -8,6 +8,7 @@ namespace Project_OOP_Arduino__Sensor_WPF
 {
     internal class OpslaanInstellingen
     {
-        public int Value { get; set; }
+        public int MaxAfstand { get; set; }
+        public int Vertraging { get; set; }
     }
 }

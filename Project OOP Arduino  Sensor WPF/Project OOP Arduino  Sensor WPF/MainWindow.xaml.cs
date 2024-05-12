@@ -26,6 +26,7 @@ namespace Project_OOP_Arduino__Sensor_WPF
         SerialPort _serialPort;
         DispatcherTimer _dispatcherTimer;
         private int maximaleAfstand;
+        private int opslaanDelay;
         private DateTime lastSavedTime = DateTime.MinValue;
 
 
@@ -44,15 +45,18 @@ namespace Project_OOP_Arduino__Sensor_WPF
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                maximaleAfstand = Convert.ToInt32(txtbxMaxAfstand.Text);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Wrong input data: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
+            string settingsFilePath = System.IO.Path.Combine(Environment.CurrentDirectory, "Settings.json");
+            string json = File.ReadAllText(settingsFilePath);
 
+            OpslaanInstellingen settings = JsonSerializer.Deserialize<OpslaanInstellingen>(json);
+
+            maximaleAfstand = settings.MaxAfstand;
+            opslaanDelay = settings.Vertraging;
+
+            txtbxMaxAfstand.Text = maximaleAfstand.ToString();
+            txtbxOpslaanDelay.Text = opslaanDelay.ToString();
+
+            progressAfstand.Maximum = maximaleAfstand;
 
             _dispatcherTimer = new DispatcherTimer();
             _dispatcherTimer.Interval = TimeSpan.FromSeconds(1);
@@ -113,6 +117,7 @@ namespace Project_OOP_Arduino__Sensor_WPF
             {
                 lblAfstand.Content = $"{afstand} Cm";
                 lblAfstand.Background = kleur;
+                progressAfstand.Value = afstand;
                 UpdateCircle();
             });
         }
@@ -200,6 +205,8 @@ namespace Project_OOP_Arduino__Sensor_WPF
             try
             {
                 maximaleAfstand = Convert.ToInt32(txtbxMaxAfstand.Text);
+                progressAfstand.Maximum = maximaleAfstand;
+                SaveSettings();
             }
             catch (Exception ex)
             {
@@ -215,7 +222,7 @@ namespace Project_OOP_Arduino__Sensor_WPF
         private bool CanSaveData()
         {
             TimeSpan elapsedTime = DateTime.Now - lastSavedTime;
-            return elapsedTime.TotalSeconds >= 3;
+            return elapsedTime.TotalSeconds >= opslaanDelay;
         }
 
         private void UpdateWindow(int getal)
@@ -223,6 +230,34 @@ namespace Project_OOP_Arduino__Sensor_WPF
             WindowData _windowData = new WindowData();
             if (getal == 1)
             _windowData.Show();
+        }
+
+        private void btnUpdateDelay_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                opslaanDelay = Convert.ToInt32(txtbxOpslaanDelay.Text);
+                SaveSettings();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Wrong input data: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        private void SaveSettings()
+        {
+            OpslaanInstellingen settings = new OpslaanInstellingen()
+            {
+                MaxAfstand = maximaleAfstand,
+                Vertraging = opslaanDelay
+            };
+
+            string json = JsonSerializer.Serialize(settings, new JsonSerializerOptions { WriteIndented = true });
+
+            string settingsFilePath = System.IO.Path.Combine(Environment.CurrentDirectory, "Settings.json");
+
+            File.WriteAllText(settingsFilePath, json);
         }
     }
 }

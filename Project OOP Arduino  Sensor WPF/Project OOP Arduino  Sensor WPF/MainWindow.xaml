@@ -12,18 +12,30 @@
         </GroupBox>
 
         <GroupBox Header="Gemeten afstand" Margin="10">
+            <StackPanel>
             <Label Name="lblAfstand" Margin="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="50"></Label>
+            <ProgressBar Height="30" Margin="10" Name="progressAfstand"></ProgressBar>
+            
+            </StackPanel>
         </GroupBox>
 
         <GroupBox Header="Overschrijdingen" Margin="10">
             <DockPanel MinHeight="50">
-                <GroupBox Header="Maximale afstand (cm)" Margin="10" Width="250" HorizontalAlignment="Left" Height="70">
-                    <DockPanel>
-                        <TextBox Width="80" HorizontalAlignment="Left" Margin="5" Text="60" Name="txtbxMaxAfstand"></TextBox>
-                        <Button Content="Update" Name="btnUpdateMax" Click="btnUpdateMax_Click" Margin="5"></Button>
-                    </DockPanel>
-                </GroupBox>
-                <GroupBox Header="Laatste Overschrijding" Margin="10" Width="250" HorizontalAlignment="Left">
+                <StackPanel>
+                    <GroupBox Header="Maximale afstand (cm)" Margin="10" Width="250" HorizontalAlignment="Left" Height="70">
+                        <DockPanel>
+                            <TextBox Width="80" HorizontalAlignment="Left" Margin="5" Text="60" Name="txtbxMaxAfstand"></TextBox>
+                            <Button Content="Update" Name="btnUpdateMax" Click="btnUpdateMax_Click" Margin="5"></Button>
+                        </DockPanel>
+                    </GroupBox>
+                    <GroupBox Header="Vertragin Opslaan (s)" Margin="10" Width="250" HorizontalAlignment="Left" Height="70">
+                        <DockPanel>
+                            <TextBox Width="80" HorizontalAlignment="Left" Margin="5" Text="3" Name="txtbxOpslaanDelay"></TextBox>
+                            <Button Content="Update" Name="btnUpdateDelay" Click="btnUpdateDelay_Click" Margin="5"></Button>
+                        </DockPanel>
+                    </GroupBox>
+                </StackPanel>
+                <GroupBox Header="Laatste Overschrijding" Margin="10" Width="250" HorizontalAlignment="Left" VerticalAlignment="Center">
                     <StackPanel>
                         <Label Content="..." Name="lblLaatsteOvers"></Label>
                         <Button Margin="10" Name="btnShowMore" Content="Meer" Click="btnShowMore_Click" ></Button>
@@ -34,9 +46,9 @@
         </GroupBox>
 
         <DockPanel>
-            <Ellipse Width="10" Height="10" Fill="Gray" Margin="5" Name="cirkelDataOntvangen" DockPanel.Dock="Left" />
-            <Label DockPanel.Dock="Right" HorizontalAlignment="Right" Content="Vives - Elektronica - ICT" FontSize="10" VerticalAlignment="Center" />
-            <Label Name="lblTimer" MinWidth="200" HorizontalAlignment="Center" MinHeight="20" Margin="5" FontSize="14" />
+            <Ellipse Width="10" Height="10" Fill="Gray" Margin="10" Name="cirkelDataOntvangen" DockPanel.Dock="Left" />
+            <Label DockPanel.Dock="Right" HorizontalAlignment="Right" Content="Vives - Elektronica - ICT" FontSize="10" VerticalAlignment="Center" Margin="10" />
+            <Label Name="lblTimer" MinWidth="200" HorizontalAlignment="Center" MinHeight="20" Margin="10" FontSize="14" />
         </DockPanel>
     </StackPanel>
 </Window>
