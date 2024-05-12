@@ -44,7 +44,7 @@ namespace Project_OOP_Arduino__Sensor_WPF
                 try
                 {
                     File.WriteAllText(filePath, string.Empty);
-                    updateWindow(1);
+                    updateWindow();
                 }
                 catch (Exception ex)
                 {
@@ -75,11 +75,10 @@ namespace Project_OOP_Arduino__Sensor_WPF
             });
         }
 
-        public void updateWindow(int getal)
+        public void updateWindow()
         {
-            MainWindow mainWindow = new MainWindow();
-            if (getal == 1)
-            mainWindow.DisplayLastSavedData();
+            MainWindow _mainWindow = new MainWindow();
+            _mainWindow.DisplayLastSavedData();
         }
     }
 }

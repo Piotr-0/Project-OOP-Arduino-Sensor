@@ -5,22 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Project_OOP_Arduino__Sensor_WPF"
         mc:Ignorable="d"
-        Title="Project OOP" SizeToContent="Height" Width="600" FontSize="18" Loaded="Window_Loaded">
+        Title="Project OOP" SizeToContent="Height" Width="600" FontSize="18" Loaded="Window_Loaded" ResizeMode="NoResize">
     <StackPanel>
         <GroupBox Header="Kies je COM poort" Margin="10">
             <ComboBox Name="cbxPortName" Margin="10" SelectionChanged="cbxPortName_SelectionChanged" IsTabStop="False"></ComboBox>
         </GroupBox>
 
         <GroupBox Header="Gemeten afstand" Margin="10">
-            <Label Name="lblAfstand" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="50"></Label>
+            <Label Name="lblAfstand" Margin="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="50"></Label>
         </GroupBox>
 
         <GroupBox Header="Overschrijdingen" Margin="10">
             <DockPanel MinHeight="50">
                 <GroupBox Header="Maximale afstand (cm)" Margin="10" Width="250" HorizontalAlignment="Left" Height="70">
                     <DockPanel>
-                        <TextBox Width="80" HorizontalAlignment="Left" Margin="5" Text="60" Name="txtbxMaxAfstand" IsEnabled="False"></TextBox>
-                        <Button Content="Update" Name="btnUpdateMax" Click="btnUpdateMax_Click" Margin="5" IsEnabled="False"></Button>
+                        <TextBox Width="80" HorizontalAlignment="Left" Margin="5" Text="60" Name="txtbxMaxAfstand"></TextBox>
+                        <Button Content="Update" Name="btnUpdateMax" Click="btnUpdateMax_Click" Margin="5"></Button>
                     </DockPanel>
                 </GroupBox>
                 <GroupBox Header="Laatste Overschrijding" Margin="10" Width="250" HorizontalAlignment="Left">
@@ -34,9 +34,9 @@
         </GroupBox>
 
         <DockPanel>
-            <Ellipse Width="10" Height="10" Fill="Gray" Margin="5" Name="cirkelDataOntvangen" HorizontalAlignment="Left"></Ellipse>
-
-            <Label HorizontalAlignment="Right" Content="Vives - Elektronica - ICT" FontSize="10" ></Label>
+            <Ellipse Width="10" Height="10" Fill="Gray" Margin="5" Name="cirkelDataOntvangen" DockPanel.Dock="Left" />
+            <Label DockPanel.Dock="Right" HorizontalAlignment="Right" Content="Vives - Elektronica - ICT" FontSize="10" VerticalAlignment="Center" />
+            <Label Name="lblTimer" MinWidth="200" HorizontalAlignment="Center" MinHeight="20" Margin="5" FontSize="14" />
         </DockPanel>
     </StackPanel>
 </Window>

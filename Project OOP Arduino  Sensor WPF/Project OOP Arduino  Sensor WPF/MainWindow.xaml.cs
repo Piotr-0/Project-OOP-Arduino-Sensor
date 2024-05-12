@@ -13,6 +13,7 @@ using System.Windows.Shapes;
 using System.IO;
 using static System.IO.Path;
 using System.Threading;
+using System.Windows.Threading;
 
 
 namespace Project_OOP_Arduino__Sensor_WPF
@@ -23,7 +24,10 @@ namespace Project_OOP_Arduino__Sensor_WPF
     public partial class MainWindow : Window
     {
         SerialPort _serialPort;
+        DispatcherTimer _dispatcherTimer;
         private int maximaleAfstand;
+        private DateTime lastSavedTime = DateTime.MinValue;
+
 
         public MainWindow()
         {
@@ -49,7 +53,18 @@ namespace Project_OOP_Arduino__Sensor_WPF
                 MessageBox.Show($"Wrong input data: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
+
+            _dispatcherTimer = new DispatcherTimer();
+            _dispatcherTimer.Interval = TimeSpan.FromSeconds(1);
+            _dispatcherTimer.Tick += _dispatcherTimer_Tick;
+            _dispatcherTimer.Start();
+
             DisplayLastSavedData();
+        }
+
+        private void _dispatcherTimer_Tick(object? sender, EventArgs e)
+        {
+            lblTimer.Content = $"{DateTime.Now.ToLongTimeString()} \t\t {DateTime.Now.ToLongDateString()}";
         }
 
         private void cbxPortName_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -64,8 +79,6 @@ namespace Project_OOP_Arduino__Sensor_WPF
                     _serialPort.PortName = cbxPortName.SelectedItem.ToString();
                     _serialPort.Open();
 
-                    txtbxMaxAfstand.IsEnabled = true;
-                    btnUpdateMax.IsEnabled = true;
                 }
             }
         }
@@ -75,19 +88,22 @@ namespace Project_OOP_Arduino__Sensor_WPF
             string data = _serialPort.ReadLine();
             data = data.TrimEnd('\r', '\n');
 
-            if (float.TryParse(data, out float distance)) { }
-
-            if (distance > maximaleAfstand)
+            if (float.TryParse(data, out float distance))
             {
-                UpdateLabels(distance, Brushes.Red);
-
-                SaveData(distance);
-                DisplayLastSavedData();
-
-            }
-            else
-            {
-                UpdateLabels(distance, Brushes.White);
+                if (distance > maximaleAfstand)
+                {
+                    UpdateLabels(distance, Brushes.Red);
+                    if (CanSaveData())
+                    {
+                        SaveData(distance);
+                        lastSavedTime = DateTime.Now;
+                    }
+                    DisplayLastSavedData();
+                }
+                else
+                {
+                    UpdateLabels(distance, Brushes.White);
+                }
             }
         }
 
@@ -144,7 +160,7 @@ namespace Project_OOP_Arduino__Sensor_WPF
                 {
                     Dispatcher.Invoke(() =>
                     {
-                        lblLaatsteOvers.Content = lastData.Tijd;
+                        lblLaatsteOvers.Content = lastData.Datum + " " + lastData.Tijd;
                     });
                 }
                 else
@@ -163,7 +179,6 @@ namespace Project_OOP_Arduino__Sensor_WPF
                 });
             }
         }
-
 
         private async void UpdateCircle()
         {
@@ -194,13 +209,20 @@ namespace Project_OOP_Arduino__Sensor_WPF
 
         private void btnShowMore_Click(object sender, RoutedEventArgs e)
         {
-            UpdateWindow(2);
+            UpdateWindow(1);
+        }
+
+        private bool CanSaveData()
+        {
+            TimeSpan elapsedTime = DateTime.Now - lastSavedTime;
+            return elapsedTime.TotalSeconds >= 3;
         }
 
         private void UpdateWindow(int getal)
         {
-            WindowData windowData = new WindowData();
-                windowData.Show();
+            WindowData _windowData = new WindowData();
+            if (getal == 1)
+            _windowData.Show();
         }
     }
 }
