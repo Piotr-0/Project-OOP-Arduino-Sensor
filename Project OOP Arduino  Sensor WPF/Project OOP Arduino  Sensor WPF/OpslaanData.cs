@@ -11,5 +11,6 @@ namespace Project_OOP_Arduino__Sensor_WPF
         public string Datum { get; set; }
         public string Tijd { get; set; }
         public float Afstand { get; set; }
+        public string Eenheid { get; set; }
     }
 }

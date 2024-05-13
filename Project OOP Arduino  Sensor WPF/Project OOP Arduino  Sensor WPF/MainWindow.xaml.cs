@@ -15,18 +15,18 @@ using static System.IO.Path;
 using System.Threading;
 using System.Windows.Threading;
 
-
 namespace Project_OOP_Arduino__Sensor_WPF
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : Window 
     {
         SerialPort _serialPort;
         DispatcherTimer _dispatcherTimer;
         private int maximaleAfstand;
         private int opslaanDelay;
+        private string eenheidAfstand = "cm";
         private DateTime lastSavedTime = DateTime.MinValue;
 
 
@@ -41,6 +41,8 @@ namespace Project_OOP_Arduino__Sensor_WPF
             _serialPort.BaudRate = 9600;
 
             _serialPort.DataReceived += _serialPort_DataReceived;
+                
+
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -130,11 +132,14 @@ namespace Project_OOP_Arduino__Sensor_WPF
             string time = currentTime.ToLongTimeString();
             string dayString = currentTime.ToShortDateString();
 
+            Centimeter centimeter = new Centimeter();
+
             OpslaanData dataToSave = new OpslaanData()
             {
                 Datum = dayString,
                 Tijd = time,
-                Afstand = afstand
+                Afstand = afstand,
+                Eenheid = centimeter.ToString()
             };
 
             string json = JsonSerializer.Serialize(dataToSave);
@@ -178,6 +183,7 @@ namespace Project_OOP_Arduino__Sensor_WPF
             }
             catch (Exception ex)
             {
+                
                 Dispatcher.Invoke(() =>
                 {
                     lblLaatsteOvers.Content = "Geen data beschikbaar";
