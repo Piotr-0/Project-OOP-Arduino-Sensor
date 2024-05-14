@@ -26,9 +26,8 @@ namespace Project_OOP_Arduino__Sensor_WPF
         DispatcherTimer _dispatcherTimer;
         private int maximaleAfstand;
         private int opslaanDelay;
-        private string eenheidAfstand = "cm";
         private DateTime lastSavedTime = DateTime.MinValue;
-
+        private WindowData _windowData;
 
         public MainWindow()
         {
@@ -41,8 +40,8 @@ namespace Project_OOP_Arduino__Sensor_WPF
             _serialPort.BaudRate = 9600;
 
             _serialPort.DataReceived += _serialPort_DataReceived;
-                
 
+            _windowData = new WindowData(this);
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -103,6 +102,7 @@ namespace Project_OOP_Arduino__Sensor_WPF
                     {
                         SaveData(distance);
                         lastSavedTime = DateTime.Now;
+                        _windowData.DisplayData();
                     }
                     DisplayLastSavedData();
                 }
@@ -216,26 +216,19 @@ namespace Project_OOP_Arduino__Sensor_WPF
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Wrong input data: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show($"Foute waarde ingegeven: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
         private void btnShowMore_Click(object sender, RoutedEventArgs e)
         {
-            UpdateWindow(1);
+            _windowData.Show();
         }
 
         private bool CanSaveData()
         {
             TimeSpan elapsedTime = DateTime.Now - lastSavedTime;
             return elapsedTime.TotalSeconds >= opslaanDelay;
-        }
-
-        private void UpdateWindow(int getal)
-        {
-            WindowData _windowData = new WindowData();
-            if (getal == 1)
-            _windowData.Show();
         }
 
         private void btnUpdateDelay_Click(object sender, RoutedEventArgs e)
@@ -247,7 +240,7 @@ namespace Project_OOP_Arduino__Sensor_WPF
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Wrong input data: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show($"Foute data ingegeven: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 

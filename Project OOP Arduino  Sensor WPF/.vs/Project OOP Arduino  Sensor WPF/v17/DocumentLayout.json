@@ -3,26 +3,6 @@
   "WorkspaceRootPath": "D:\\Github\\Project OOP Arduino Sensor\\Project OOP Arduino  Sensor WPF\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F1F3C273-C5EC-4E34-A7FE-37B7C2A0117D}|Project OOP Arduino  Sensor WPF\\Project OOP Arduino  Sensor WPF.csproj|d:\\github\\project oop arduino sensor\\project oop arduino  sensor wpf\\project oop arduino  sensor wpf\\centimeter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F1F3C273-C5EC-4E34-A7FE-37B7C2A0117D}|Project OOP Arduino  Sensor WPF\\Project OOP Arduino  Sensor WPF.csproj|solutionrelative:project oop arduino  sensor wpf\\centimeter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F1F3C273-C5EC-4E34-A7FE-37B7C2A0117D}|Project OOP Arduino  Sensor WPF\\Project OOP Arduino  Sensor WPF.csproj|d:\\github\\project oop arduino sensor\\project oop arduino  sensor wpf\\project oop arduino  sensor wpf\\eenheidafstand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F1F3C273-C5EC-4E34-A7FE-37B7C2A0117D}|Project OOP Arduino  Sensor WPF\\Project OOP Arduino  Sensor WPF.csproj|solutionrelative:project oop arduino  sensor wpf\\eenheidafstand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F1F3C273-C5EC-4E34-A7FE-37B7C2A0117D}|Project OOP Arduino  Sensor WPF\\Project OOP Arduino  Sensor WPF.csproj|d:\\github\\project oop arduino sensor\\project oop arduino  sensor wpf\\project oop arduino  sensor wpf\\windowdata.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F1F3C273-C5EC-4E34-A7FE-37B7C2A0117D}|Project OOP Arduino  Sensor WPF\\Project OOP Arduino  Sensor WPF.csproj|solutionrelative:project oop arduino  sensor wpf\\windowdata.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F1F3C273-C5EC-4E34-A7FE-37B7C2A0117D}|Project OOP Arduino  Sensor WPF\\Project OOP Arduino  Sensor WPF.csproj|d:\\github\\project oop arduino sensor\\project oop arduino  sensor wpf\\project oop arduino  sensor wpf\\opslaaninstellingen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F1F3C273-C5EC-4E34-A7FE-37B7C2A0117D}|Project OOP Arduino  Sensor WPF\\Project OOP Arduino  Sensor WPF.csproj|solutionrelative:project oop arduino  sensor wpf\\opslaaninstellingen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F1F3C273-C5EC-4E34-A7FE-37B7C2A0117D}|Project OOP Arduino  Sensor WPF\\Project OOP Arduino  Sensor WPF.csproj|d:\\github\\project oop arduino sensor\\project oop arduino  sensor wpf\\project oop arduino  sensor wpf\\opslaandata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F1F3C273-C5EC-4E34-A7FE-37B7C2A0117D}|Project OOP Arduino  Sensor WPF\\Project OOP Arduino  Sensor WPF.csproj|solutionrelative:project oop arduino  sensor wpf\\opslaandata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F1F3C273-C5EC-4E34-A7FE-37B7C2A0117D}|Project OOP Arduino  Sensor WPF\\Project OOP Arduino  Sensor WPF.csproj|d:\\github\\project oop arduino sensor\\project oop arduino  sensor wpf\\project oop arduino  sensor wpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F1F3C273-C5EC-4E34-A7FE-37B7C2A0117D}|Project OOP Arduino  Sensor WPF\\Project OOP Arduino  Sensor WPF.csproj|solutionrelative:project oop arduino  sensor wpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -31,8 +11,28 @@
       "RelativeMoniker": "D:0:0:{F1F3C273-C5EC-4E34-A7FE-37B7C2A0117D}|Project OOP Arduino  Sensor WPF\\Project OOP Arduino  Sensor WPF.csproj|solutionrelative:project oop arduino  sensor wpf\\windowdata.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{F1F3C273-C5EC-4E34-A7FE-37B7C2A0117D}|Project OOP Arduino  Sensor WPF\\Project OOP Arduino  Sensor WPF.csproj|d:\\github\\project oop arduino sensor\\project oop arduino  sensor wpf\\project oop arduino  sensor wpf\\opslaandata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1F3C273-C5EC-4E34-A7FE-37B7C2A0117D}|Project OOP Arduino  Sensor WPF\\Project OOP Arduino  Sensor WPF.csproj|solutionrelative:project oop arduino  sensor wpf\\opslaandata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F1F3C273-C5EC-4E34-A7FE-37B7C2A0117D}|Project OOP Arduino  Sensor WPF\\Project OOP Arduino  Sensor WPF.csproj|d:\\github\\project oop arduino sensor\\project oop arduino  sensor wpf\\project oop arduino  sensor wpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{F1F3C273-C5EC-4E34-A7FE-37B7C2A0117D}|Project OOP Arduino  Sensor WPF\\Project OOP Arduino  Sensor WPF.csproj|solutionrelative:project oop arduino  sensor wpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1F3C273-C5EC-4E34-A7FE-37B7C2A0117D}|Project OOP Arduino  Sensor WPF\\Project OOP Arduino  Sensor WPF.csproj|d:\\github\\project oop arduino sensor\\project oop arduino  sensor wpf\\project oop arduino  sensor wpf\\opslaaninstellingen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1F3C273-C5EC-4E34-A7FE-37B7C2A0117D}|Project OOP Arduino  Sensor WPF\\Project OOP Arduino  Sensor WPF.csproj|solutionrelative:project oop arduino  sensor wpf\\opslaaninstellingen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1F3C273-C5EC-4E34-A7FE-37B7C2A0117D}|Project OOP Arduino  Sensor WPF\\Project OOP Arduino  Sensor WPF.csproj|d:\\github\\project oop arduino sensor\\project oop arduino  sensor wpf\\project oop arduino  sensor wpf\\eenheidafstand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1F3C273-C5EC-4E34-A7FE-37B7C2A0117D}|Project OOP Arduino  Sensor WPF\\Project OOP Arduino  Sensor WPF.csproj|solutionrelative:project oop arduino  sensor wpf\\eenheidafstand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1F3C273-C5EC-4E34-A7FE-37B7C2A0117D}|Project OOP Arduino  Sensor WPF\\Project OOP Arduino  Sensor WPF.csproj|d:\\github\\project oop arduino sensor\\project oop arduino  sensor wpf\\project oop arduino  sensor wpf\\centimeter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1F3C273-C5EC-4E34-A7FE-37B7C2A0117D}|Project OOP Arduino  Sensor WPF\\Project OOP Arduino  Sensor WPF.csproj|solutionrelative:project oop arduino  sensor wpf\\centimeter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1F3C273-C5EC-4E34-A7FE-37B7C2A0117D}|Project OOP Arduino  Sensor WPF\\Project OOP Arduino  Sensor WPF.csproj|d:\\github\\project oop arduino sensor\\project oop arduino  sensor wpf\\project oop arduino  sensor wpf\\windowdata.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F1F3C273-C5EC-4E34-A7FE-37B7C2A0117D}|Project OOP Arduino  Sensor WPF\\Project OOP Arduino  Sensor WPF.csproj|solutionrelative:project oop arduino  sensor wpf\\windowdata.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,15 +42,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "WindowData.xaml.cs",
+              "DocumentMoniker": "D:\\Github\\Project OOP Arduino Sensor\\Project OOP Arduino  Sensor WPF\\Project OOP Arduino  Sensor WPF\\WindowData.xaml.cs",
+              "RelativeDocumentMoniker": "Project OOP Arduino  Sensor WPF\\WindowData.xaml.cs",
+              "ToolTip": "D:\\Github\\Project OOP Arduino Sensor\\Project OOP Arduino  Sensor WPF\\Project OOP Arduino  Sensor WPF\\WindowData.xaml.cs",
+              "RelativeToolTip": "Project OOP Arduino  Sensor WPF\\WindowData.xaml.cs",
+              "ViewState": "AQIAADsAAAAAAAAAAAAAADsAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-28T12:11:03.31Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\Github\\Project OOP Arduino Sensor\\Project OOP Arduino  Sensor WPF\\Project OOP Arduino  Sensor WPF\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Project OOP Arduino  Sensor WPF\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\Github\\Project OOP Arduino Sensor\\Project OOP Arduino  Sensor WPF\\Project OOP Arduino  Sensor WPF\\MainWindow.xaml.cs",
+              "RelativeToolTip": "Project OOP Arduino  Sensor WPF\\MainWindow.xaml.cs",
+              "ViewState": "AQIAAPMAAAAAAAAAAAAAAPIAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-20T09:39:55.865Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "EenheidAfstand.cs",
               "DocumentMoniker": "D:\\Github\\Project OOP Arduino Sensor\\Project OOP Arduino  Sensor WPF\\Project OOP Arduino  Sensor WPF\\EenheidAfstand.cs",
               "RelativeDocumentMoniker": "Project OOP Arduino  Sensor WPF\\EenheidAfstand.cs",
@@ -58,12 +80,11 @@
               "RelativeToolTip": "Project OOP Arduino  Sensor WPF\\EenheidAfstand.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-13T19:12:21.02Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-13T19:12:21.02Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "Centimeter.cs",
               "DocumentMoniker": "D:\\Github\\Project OOP Arduino Sensor\\Project OOP Arduino  Sensor WPF\\Project OOP Arduino  Sensor WPF\\Centimeter.cs",
               "RelativeDocumentMoniker": "Project OOP Arduino  Sensor WPF\\Centimeter.cs",
@@ -71,25 +92,11 @@
               "RelativeToolTip": "Project OOP Arduino  Sensor WPF\\Centimeter.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-13T18:23:27.926Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-13T18:23:27.926Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "D:\\Github\\Project OOP Arduino Sensor\\Project OOP Arduino  Sensor WPF\\Project OOP Arduino  Sensor WPF\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Project OOP Arduino  Sensor WPF\\MainWindow.xaml.cs",
-              "ToolTip": "D:\\Github\\Project OOP Arduino Sensor\\Project OOP Arduino  Sensor WPF\\Project OOP Arduino  Sensor WPF\\MainWindow.xaml.cs",
-              "RelativeToolTip": "Project OOP Arduino  Sensor WPF\\MainWindow.xaml.cs",
-              "ViewState": "AQIAAIQAAAAAAAAAAAAAAI0AAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-20T09:39:55.865Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "OpslaanData.cs",
               "DocumentMoniker": "D:\\Github\\Project OOP Arduino Sensor\\Project OOP Arduino  Sensor WPF\\Project OOP Arduino  Sensor WPF\\OpslaanData.cs",
               "RelativeDocumentMoniker": "Project OOP Arduino  Sensor WPF\\OpslaanData.cs",
@@ -102,32 +109,30 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "OpslaanInstellingen.cs",
               "DocumentMoniker": "D:\\Github\\Project OOP Arduino Sensor\\Project OOP Arduino  Sensor WPF\\Project OOP Arduino  Sensor WPF\\OpslaanInstellingen.cs",
               "RelativeDocumentMoniker": "Project OOP Arduino  Sensor WPF\\OpslaanInstellingen.cs",
               "ToolTip": "D:\\Github\\Project OOP Arduino Sensor\\Project OOP Arduino  Sensor WPF\\Project OOP Arduino  Sensor WPF\\OpslaanInstellingen.cs",
               "RelativeToolTip": "Project OOP Arduino  Sensor WPF\\OpslaanInstellingen.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAWAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T19:09:30.458Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-12T19:09:30.458Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "WindowData.xaml",
               "DocumentMoniker": "D:\\Github\\Project OOP Arduino Sensor\\Project OOP Arduino  Sensor WPF\\Project OOP Arduino  Sensor WPF\\WindowData.xaml",
               "RelativeDocumentMoniker": "Project OOP Arduino  Sensor WPF\\WindowData.xaml",
               "ToolTip": "D:\\Github\\Project OOP Arduino Sensor\\Project OOP Arduino  Sensor WPF\\Project OOP Arduino  Sensor WPF\\WindowData.xaml",
               "RelativeToolTip": "Project OOP Arduino  Sensor WPF\\WindowData.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-28T12:10:28.558Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-28T12:10:28.558Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "D:\\Github\\Project OOP Arduino Sensor\\Project OOP Arduino  Sensor WPF\\Project OOP Arduino  Sensor WPF\\MainWindow.xaml",
               "RelativeDocumentMoniker": "Project OOP Arduino  Sensor WPF\\MainWindow.xaml",
@@ -135,19 +140,6 @@
               "RelativeToolTip": "Project OOP Arduino  Sensor WPF\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-04-20T09:40:02.793Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "WindowData.xaml.cs",
-              "DocumentMoniker": "D:\\Github\\Project OOP Arduino Sensor\\Project OOP Arduino  Sensor WPF\\Project OOP Arduino  Sensor WPF\\WindowData.xaml.cs",
-              "RelativeDocumentMoniker": "Project OOP Arduino  Sensor WPF\\WindowData.xaml.cs",
-              "ToolTip": "D:\\Github\\Project OOP Arduino Sensor\\Project OOP Arduino  Sensor WPF\\Project OOP Arduino  Sensor WPF\\WindowData.xaml.cs",
-              "RelativeToolTip": "Project OOP Arduino  Sensor WPF\\WindowData.xaml.cs",
-              "ViewState": "AQIAACwAAAAAAAAAAAAAAEEAAAALAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-28T12:11:03.31Z",
               "EditorCaption": ""
             }
           ]

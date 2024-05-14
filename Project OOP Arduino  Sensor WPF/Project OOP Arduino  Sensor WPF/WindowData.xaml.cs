@@ -25,9 +25,13 @@ namespace Project_OOP_Arduino__Sensor_WPF
     public partial class WindowData : Window
     {
 
-        public WindowData()
+        private MainWindow _mainWindow;
+
+        public WindowData(MainWindow mainWindow)
         {
             InitializeComponent();
+
+            _mainWindow = mainWindow;
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -44,16 +48,16 @@ namespace Project_OOP_Arduino__Sensor_WPF
                 try
                 {
                     File.WriteAllText(filePath, string.Empty);
-                    updateWindow();
+                    _mainWindow.DisplayLastSavedData();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Failed to clear data: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show($"Niet mogelijk om data te verwijderen: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
             else
             {
-                MessageBox.Show("Data file not found", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Bestand niet gevonden", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             DisplayData();
         }
@@ -73,12 +77,6 @@ namespace Project_OOP_Arduino__Sensor_WPF
             {
                 listbxData.ItemsSource = dataList;
             });
-        }
-
-        public void updateWindow()
-        {
-            MainWindow _mainWindow = new MainWindow();
-            _mainWindow.DisplayLastSavedData();
         }
     }
 }
